@@ -2,7 +2,7 @@
 #include <sys/time.h>
 #include <unistd.h>
 
-// Measuring the cost of a system call
+// Measuring the time to run a system call
 
 int main() {
     struct timeval current_time;
