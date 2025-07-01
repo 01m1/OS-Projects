@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <unistd.h>
 
 int main(int argc, char *argv[]) {
     int mb = atoi(argv[1]);
@@ -16,6 +17,7 @@ int main(int argc, char *argv[]) {
     }
     
     clock_t begin = clock();
+    printf("%d\n",getpid());
 
     while (((double) (clock() - begin) / CLOCKS_PER_SEC) < time) {
         for (int i = 0; i < size; i++) {
